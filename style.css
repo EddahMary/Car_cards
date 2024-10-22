@@ -57,7 +57,7 @@ body{
 .card-title, .card_body{
     width: 80%;
     height: 40%;
-    color: rgb(48, 48, 165);
+    color: rgb(1, 1, 2);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -65,4 +65,55 @@ body{
     align-items: flex-start;
     gap: 5px;
     border-radius: 0 10px 10px 0;
+}
+
+.like-container {
+  display: flex;
+  align-items: center; /* Align button and count */
+  margin-bottom: 10px; /* Space between like containers */
+}
+
+.like-count {
+  margin-left: 10px; /* Space between button and count */
+  font-size: 16px; /* Adjust font size as needed */
+}
+
+.heart-btn {
+  width: 50px; 
+  height: 50px;
+  background-color: #b68596; /* Initial color */
+  border: none;
+  border-radius: 50%; /* Creates the circular part of the heart */
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  color: black; /* Text color */
+  font-weight: bold;
+  font-size: 14px;
+  transition: background-color 0.3s; /* Smooth transition for color change */
+}
+
+/* .heart-btn:before,
+.heart-btn:after {
+  content: '';
+  width: 25px;
+  height: 25px;
+  background-color: #ff4081; 
+  border-radius: 50%;
+  position: absolute;
+} */
+
+.heart-btn:before {
+  top: -12.5px; /* Position the top half of the heart */
+  left: 12.5px; /* Center it horizontally */
+}
+
+.heart-btn:after {
+  left: 0;
+  top: 12.5px; /* Position the bottom half of the heart */
+}
+
+/* Style when liked */
+.liked {
+  background-color: #e91e1e; /* Color when liked */
 }
